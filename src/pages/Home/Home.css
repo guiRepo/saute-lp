@@ -43,6 +43,10 @@ h1, h2, h3 {
   font-size: 36px;
 }
 
+p {
+  font-size: 19px;
+}
+
 .blue {
   color: #5b8be7;
 }

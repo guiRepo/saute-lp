@@ -5,19 +5,19 @@ import lucasBittencourt from "../../assets/carrossel_lucas.png"
 import alertaIcon from "../../assets/icone_exclamacao.png";
 
 export default function Home() {
-  const [form, setForm] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    // outros campos que seu formulário tenha
   });
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Dados enviados:", form);
   };
 
   return (
@@ -51,7 +51,7 @@ export default function Home() {
           <input
             type="text"
             name="nome"
-            value={form.nome}
+            value={formData.nome}
             onChange={handleChange}
             placeholder="Nome completo"
             required
@@ -60,7 +60,7 @@ export default function Home() {
           <input
             type="email"
             name="email"
-            value={form.email}
+            value={formData.email}
             onChange={handleChange}
             placeholder="Seu melhor e-mail"
             required
@@ -68,8 +68,8 @@ export default function Home() {
           <label>Telefone:</label>
           <input
             type="tel"
-            name="telefone"
-            value={form.telefone}
+            name="phone"
+            value={formData.phone}
             onChange={handleChange}
             placeholder="Telefone com WhatsApp"
             required
@@ -78,6 +78,7 @@ export default function Home() {
             <button type="submit" className="btn-green">
               QUERO RECEBER OS CONTEÚDOS GRATUITOS
             </button>
+            {status && <p>{status}</p>}
           </div>
         </form>
       </section>
