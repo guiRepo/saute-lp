@@ -43,6 +43,9 @@ export default function Home() {
           Curso presencial | Vagas limitadas | Encontros com Dr. Lucas
           Bittencourt
         </div>
+
+
+
         <form onSubmit={handleSubmit} className="formulario">
           <p className="form-title">
             Preencha para receber tudo direto no seu WhatsApp e e-mail:
