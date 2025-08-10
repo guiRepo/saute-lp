@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #262b49 0%,
+    #315472 50%,
+    #2a3151 100%
+  );
+  color: white;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bloco {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.blue {
+  color: #4db6ff;
+}
+
+.blue-bold {
+  color: #4db6ff;
+  font-weight: bold;
+}
+
+.blue-light {
+  color: #7dc8ff;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.badge {
+  background-color: #003366;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.formulario {
+  background-color: #001a33;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.formulario label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+}
+
+.btn-green {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-green:hover {
+  background-color: #45a049;
+}
+
+.bloco-consultorio img,
+.bloco-instrutor img {
+  max-width: 400px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.bloco-final {
+  background: linear-gradient(180deg, #0b1030 0%, #000 100%);
+  border-radius: 12px;
+}
+
+.bloco-final .icone-alerta {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.bloco-final ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bloco-final li {
+  background-color: #004466;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-align: left;
+}
