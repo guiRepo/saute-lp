@@ -25,7 +25,7 @@ export default function Home() {
 
       {/* BLOCO 1 - Formulário */}
       <section className="bloco bloco-form">
-        <h1>
+        <h1 className="title-bloco-form">
           DOMINE A TESTOSTERONA,{" "}
           <span className="blue">TRANSFORME SUA CLÍNICA</span> E SE TORNE
           REFERÊNCIA EM SAÚDE MASCULINA NO BRASIL.
@@ -43,9 +43,6 @@ export default function Home() {
           Curso presencial | Vagas limitadas | Encontros com Dr. Lucas
           Bittencourt
         </div>
-
-
-
         <form onSubmit={handleSubmit} className="formulario">
           <p className="form-title">
             Preencha para receber tudo direto no seu WhatsApp e e-mail:
@@ -77,16 +74,18 @@ export default function Home() {
             placeholder="Telefone com WhatsApp"
             required
           />
-          <button type="submit" className="btn-green">
-            QUERO RECEBER OS CONTEÚDOS GRATUITOS
-          </button>
+          <div className="container-button">
+            <button type="submit" className="btn-green">
+              QUERO RECEBER OS CONTEÚDOS GRATUITOS
+            </button>
+          </div>
         </form>
       </section>
 
       {/* BLOCO 2 - Consultório */}
       <section className="bloco bloco-consultorio">
         <img src={medicoHolograma} alt="Médico com holograma" />
-        <h2>
+        <h2 className="title-bloco-form">
           VOCÊ JÁ SENTIU QUE{" "}
           <span className="blue">A FACULDADE NÃO TE PREPAROU</span> PARA O
           CONSULTÓRIO REAL?
@@ -125,13 +124,13 @@ export default function Home() {
       <section className="bloco bloco-final">
         <img src={alertaIcon} alt="Alerta" className="icone-alerta" />
         <h2>O SAUTE NÃO É PARA TODOS.</h2>
-        <p>
+        <p className="subtittle-bloco-final">
           É para médicos que desejam ir além da teoria rasa e se tornar
           referência clínica no atendimento ao homem moderno — com domínio
           técnico, segurança na prescrição hormonal e prática aplicada à
           realidade do consultório.
         </p>
-        <p>
+        <p className="subtittle-bloco-final">
           A nova turma do SAUTE está em formação e as vagas presenciais são
           limitadas.
         </p>
@@ -142,10 +141,10 @@ export default function Home() {
           <li>✅ Etapas presenciais e imersivas do SAUTE</li>
           <li>✅ Aulas bônus gratuitas com o Dr. Lucas</li>
         </ul>
-        <p>
+        <p className="subtittle-bloco-final">
           Uma oportunidade real de transformar sua carreira na saúde masculina.
         </p>
-        <p>
+        <p className="subtittle-bloco-final">
           Garanta sua prioridade. A seleção de cada turma é estratégica… e as
           vagas, limitadas.
         </p>
