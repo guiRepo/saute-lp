@@ -3,6 +3,7 @@ import "./Home.css";
 import medicoHolograma from "../../assets/carrossel_medico.png"
 import lucasBittencourt from "../../assets/carrossel_lucas.png"
 import alertaIcon from "../../assets/icone_exclamacao.png";
+import heroImage from "../../assets/lucas_header.png";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -21,6 +22,10 @@ export default function Home() {
   };
 
   return (
+    <>
+    <section className="hero-section">
+      <img src={heroImage} alt="Lucas Saute" className="hero-image" />
+    </section>
     <div className="landing-container">
 
       {/* BLOCO 1 - Formulário */}
@@ -78,7 +83,6 @@ export default function Home() {
             <button type="submit" className="btn-green">
               QUERO RECEBER OS CONTEÚDOS GRATUITOS
             </button>
-            {status && <p>{status}</p>}
           </div>
         </form>
       </section>
@@ -123,7 +127,9 @@ export default function Home() {
 
       {/* BLOCO 4 - Final */}
       <section className="bloco bloco-final">
-        <img src={alertaIcon} alt="Alerta" className="icone-alerta" />
+        <div className="icon-bloco">
+          <img src={alertaIcon} alt="Alerta" className="icone-alerta" />
+        </div>
         <h2>O SAUTE NÃO É PARA TODOS.</h2>
         <p className="subtittle-bloco-final">
           É para médicos que desejam ir além da teoria rasa e se tornar
@@ -149,8 +155,13 @@ export default function Home() {
           Garanta sua prioridade. A seleção de cada turma é estratégica… e as
           vagas, limitadas.
         </p>
-        <button className="btn-green">QUERO GARANTIR MINHA VAGA</button>
+        <div className="container-button">
+          <button type="submit" className="btn-green">
+            QUERO RECEBER OS CONTEÚDOS GRATUITOS
+          </button>
+        </div>
       </section>
     </div>
+    </>
   );
 }

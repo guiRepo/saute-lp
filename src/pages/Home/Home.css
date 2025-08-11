@@ -1,17 +1,24 @@
 /* ===== RESET BÁSICO ===== */
 @font-face {
   font-family: 'Tusker Grotesk';
-  src: url('../../src/assets/fonts/tusker-grotesk-5600-semibold.ttf') format('woff2'),
-       url('caminho/para/TuskerGrotesk-SemiBold.woff') format('woff');
-  font-weight: 600; /* ou bold */
+  src: url('../../src/assets/fonts/tusker-grotesk-5600-semibold.ttf') format('woff2');
+  font-weight: 600;
   font-style: normal;
 }
+
+html {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  /* background: linear-gradient(to bottom, #262b49 0%, #315472 50%, #2a3151 100%); */
-  background: linear-gradient(to right, #161844 0%, #152534 50%, #161844 100%);
-
+  background-image: url('../../src/assets/unfo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100%;
   color: white;
 }
 
@@ -22,14 +29,12 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 
 /* ===== BLOCO GERAL ===== */
 .bloco {
   max-width: 600px;
   margin: auto;
-  padding: 10px 20px;
   text-align: center;
 }
 
@@ -47,22 +52,10 @@ p {
   font-size: 19px;
 }
 
-.blue {
-  color: #5b8be7;
-}
-
-.blue-bold {
-  color: #5b8be7;
-  font-weight: bold;
-}
-
-.blue-light {
-  color: #5b8be7;
-}
-
-.bold {
-  font-weight: bold;
-}
+.blue { color: #5b8be7; }
+.blue-bold { color: #5b8be7; font-weight: bold; }
+.blue-light { color: #5b8be7; }
+.bold { font-weight: bold; }
 
 /* ===== BADGE ===== */
 .badge {
@@ -73,13 +66,13 @@ p {
 }
 
 /* ===== FORMULÁRIO ===== */
-
 .form-title {
   text-align: center;
   font-family: Tusker Grotesk, sans-serif;
   font-size: 28px;
   padding-inline: 30px;
 }
+
 .formulario {
   display: flex;
   flex-direction: column;
@@ -115,6 +108,7 @@ p {
   justify-content: center;
   margin-block: 20px;
 }
+
 /* ===== BOTÃO ===== */
 .btn-green {
   width: 80%;
@@ -157,6 +151,11 @@ p {
   width: 120px;
 }
 
+.icon-bloco {
+  display: flex;
+  justify-content: center;
+}
+
 .subtittle-bloco-final {
   text-align: left;
 }
@@ -187,6 +186,10 @@ p {
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Evita bug no mobile */
+  }
+
   .bloco {
     padding: 20px 10px;
     text-align: left;
@@ -203,6 +206,13 @@ p {
 }
 
 @media (max-width: 480px) {
+  p {
+    text-align: center;
+  }
+  .title-bloco-form {
+    font-size: 26px;
+    text-align: center;
+  }
   .formulario {
     padding: 12px;
   }
@@ -211,9 +221,32 @@ p {
     font-size: 1.2rem;
   }
 
+  .bloco-final h2 {
+    font-size: 28px;
+  }
+
+  .bloco-final h3 {
+    font-size: 22px;
+  }
+
   .btn-green {
     font-size: 14px;
     padding: 12px;
   }
 }
 
+/* ===== HERO ===== */
+.hero-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 600px; 
+  height: auto;   
+  display: block;  
+ 
+}
